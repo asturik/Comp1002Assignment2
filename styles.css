@@ -1,0 +1,207 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page style */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+/* Header and navigation */
+header {
+  background-color: #222;
+  padding: 15px 0;
+}
+
+header nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  color: #ddd;
+  font-size: 14px;
+}
+
+header nav a:hover {
+  color: white;
+}
+
+/* Hero section */
+main section:first-of-type {
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 80px 20px;
+}
+
+main section:first-of-type h1 {
+  font-size: 48px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+main section:first-of-type p {
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  color: #666;
+  font-size: 20px;
+}
+
+main section:first-of-type p a {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #007bff;
+  color: #007bff;
+  border-radius: 4px;
+}
+
+main section:first-of-type p a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Product section */
+main section[aria-label="Product highlights"] {
+  width: 90%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* Product cards */
+main section[aria-label="Product highlights"] article {
+  text-align: center;
+  padding: 50px 20px 0 20px;
+  min-height: 500px;
+  border-radius: 20px;
+}
+
+/* Alternate dark and light backgrounds */
+main section[aria-label="Product highlights"] article:nth-child(1),
+main section[aria-label="Product highlights"] article:nth-child(4),
+main section[aria-label="Product highlights"] article:nth-child(5),
+main section[aria-label="Product highlights"] article:nth-child(8) {
+  background-color: #343a40;
+  color: white;
+}
+
+main section[aria-label="Product highlights"] article:nth-child(2),
+main section[aria-label="Product highlights"] article:nth-child(3),
+main section[aria-label="Product highlights"] article:nth-child(6),
+main section[aria-label="Product highlights"] article:nth-child(7) {
+  background-color: #f1f3f5;
+  color: #222;
+}
+
+main section[aria-label="Product highlights"] article h2 {
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+main section[aria-label="Product highlights"] article p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+/* Fake phone/image block */
+main section[aria-label="Product highlights"] article div {
+  width: 220px;
+  height: 320px;
+  margin: auto;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Light phone on dark cards */
+main section[aria-label="Product highlights"] article:nth-child(1) div,
+main section[aria-label="Product highlights"] article:nth-child(4) div,
+main section[aria-label="Product highlights"] article:nth-child(5) div,
+main section[aria-label="Product highlights"] article:nth-child(8) div {
+  background-color: white;
+}
+
+/* Dark phone on light cards */
+main section[aria-label="Product highlights"] article:nth-child(2) div,
+main section[aria-label="Product highlights"] article:nth-child(3) div,
+main section[aria-label="Product highlights"] article:nth-child(6) div,
+main section[aria-label="Product highlights"] article:nth-child(7) div {
+  background-color: #222;
+}
+
+/* Footer */
+footer {
+  width: 90%;
+  margin: 40px auto;
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer p {
+  margin-bottom: 20px;
+  min-width: 150px;
+  color: #666;
+}
+
+footer section {
+  margin-bottom: 20px;
+  min-width: 150px;
+}
+
+footer section h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+footer section ul {
+  list-style: none;
+}
+
+footer section ul li {
+  margin-bottom: 8px;
+}
+
+footer section ul li a {
+  color: #666;
+  font-size: 14px;
+}
+
+footer section ul li a:hover {
+  color: black;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  main section[aria-label="Product highlights"] {
+    grid-template-columns: 1fr;
+  }
+
+  main section:first-of-type h1 {
+    font-size: 36px;
+  }
+
+  main section:first-of-type p {
+    font-size: 18px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
